@@ -1,25 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:linkedin/screens/sign_in_page.dart/forgot_password.dart';
-import 'package:linkedin/screens/sign_up_page.dart/sign_up_screen.dart';
 import 'package:linkedin/screens/sign_up_page.dart/signup_page.dart';
 import 'package:linkedin/widgets/constants.dart';
-import 'package:flutter/src/rendering/box.dart';
 
-class SignInScreen extends StatefulWidget {
-  const SignInScreen({super.key});
 
-  @override
-  State<SignInScreen> createState() => _SignInScreenState();
-}
+class ForgotPassword extends StatelessWidget {
+  const ForgotPassword({super.key});
 
-class _SignInScreenState extends State<SignInScreen> {
 
-bool remember = false;
+
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+      bool remember  = false;
+    return Scaffold(
       body: 
       SingleChildScrollView(
         child: Column(
@@ -91,57 +85,19 @@ bool remember = false;
                         ),
 
                            SizedBox(height: 0,),
-                        TextFormField(
-                          decoration: InputDecoration(
-                            suffixIcon: Icon(Icons.remove_red_eye) ,
-
-                            labelText: 'Password '
-                          ),
-                        ),
+                        
   Row(
                             children: [
-                              Checkbox(value: remember,
-                              activeColor: const Color.fromRGBO(42, 117, 179, 1)
-                              , onChanged: (value){
-                                setState(() {
-                                  remember = value!;
-                                });
+                            
 
-
-                              }),
-                              SizedBox(width: 0,),
-
-                              Text('Agree Terms & conditions', 
-                              style: TextStyle(
-                                color: Colors.black87,
-                              fontSize: 17,
-                              fontWeight: FontWeight.bold
-                              ),),
-                                    SizedBox(width: 10,),
-                              Text('Learn more', 
-                              style: TextStyle(
-                                fontSize: 14,
-                                color: kPrimaryColor,
-
-                              ),)
+                   
+                        
+                             
                              
                             ],
                           ),
 
-              Align(
-                alignment: Alignment.centerRight,
-                child: InkWell(
-                  onTap: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>ForgotPassword()));
-                  },
-                  child: Text('Forgot password?', 
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 14,
-                    color: const Color.fromARGB(255, 8, 101, 177)
-                  ),),
-                ),
-              ),
+            
 
    SizedBox(height: 20,),
                   SizedBox(
@@ -163,7 +119,7 @@ bool remember = false;
                           )
                         ) 
                       ),
-                       child: Text("Log in",
+                       child: Text("Continue",
                        style: TextStyle(
                         color: Colors.white,
                         fontSize: 18

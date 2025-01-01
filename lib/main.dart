@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:linkedin/main_page.dart';
 import 'package:linkedin/screens/welcome_screen.dart';
+import 'package:linkedin/widgets/custom_appbar.dart';
 
 
 
@@ -22,7 +24,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp (
       debugShowCheckedModeBanner: false,
       title: 'LinkedIn ',
-      home: WelcomeScreen(),
+      home: MainPage(),
     );
   }
 }
