@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:linkedin/screens/sign_up_screen4.dart';
 import 'package:linkedin/widgets/constants.dart';
 
 
@@ -46,7 +47,7 @@ class SignUpScreen2 extends StatelessWidget {
               ),
           
           
-              SizedBox(height: 50,),
+              SizedBox(height: 20,),
               TextFormField(
                 decoration: InputDecoration(
           labelText: 'Last Name',
@@ -66,7 +67,7 @@ class SignUpScreen2 extends StatelessWidget {
                       
                       child: ElevatedButton(onPressed: (){
           
-                        // Navigator.push(context, MaterialPageRoute(builder: (context)=>WelcomeScreen()));
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>SignUpScreen4()));
                       },
                         style: ButtonStyle(
                           backgroundColor: 

@@ -36,7 +36,7 @@ class _MyWidgetState extends State<SignUpScreen4> {
               
                             SizedBox(height: 40,),
               
-                        Text('Add your Email or phone', 
+                        Text('Set your password', 
                         style: TextStyle(
                           fontSize: 26,
                           fontWeight: FontWeight.bold
@@ -47,11 +47,51 @@ class _MyWidgetState extends State<SignUpScreen4> {
                         SizedBox(height: 40,),
                         TextFormField(
                           decoration: InputDecoration(
-                            labelText: 'Email or Phone'
+                            labelText: 'Enter password*'
                           ),
                         ),
 
-                          SizedBox(height: 40,),
+
+ SizedBox(height: 20,),
+                        TextFormField(
+                          decoration: InputDecoration(
+                            labelText: 'Confirm password*'
+                          ),
+                        ),
+
+                          SizedBox(height: 10,),
+
+
+                          Row(
+                            children: [
+                              Checkbox(value: remember,
+                              activeColor: const Color.fromRGBO(42, 117, 179, 1)
+                              , onChanged: (value){
+                                setState(() {
+                                  remember = value!;
+                                });
+
+
+                              }),
+                              SizedBox(width: 0,),
+
+                              Text('Agree Terms & conditions', 
+                              style: TextStyle(
+                                color: Colors.black87,
+                              fontSize: 17,
+                              fontWeight: FontWeight.bold
+                              ),),
+                                    SizedBox(width: 10,),
+                              Text('Learn more', 
+                              style: TextStyle(
+                                fontSize: 14,
+                                color: kPrimaryColor,
+
+                              ),)
+                             
+                            ],
+                          ),
+
 
                         SizedBox(
                       height: 55,

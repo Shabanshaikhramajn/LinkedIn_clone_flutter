@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:linkedin/screens/sign_in_page.dart/sign_in_screen.dart';
 import 'package:linkedin/screens/sign_up_page.dart/sign_up_screen.dart';
 import 'package:linkedin/screens/sign_up_page.dart/signup_page.dart';
+import 'package:linkedin/screens/sign_up_screen4.dart';
 import 'package:linkedin/widgets/constants.dart';
 
 class WelcomeScreen extends StatelessWidget {
@@ -62,7 +64,7 @@ class WelcomeScreen extends StatelessWidget {
                     
                     child: ElevatedButton(onPressed: (){
 
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=>SignUpScreen()));
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>SignUpScreen2()));
                     },
                       style: ButtonStyle(
                         backgroundColor: 
@@ -166,7 +168,7 @@ class WelcomeScreen extends StatelessWidget {
               Center(
                 child: InkWell(
                   onTap: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=> SignUpScreen2()));
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=> SignInScreen()));
                   },
                   child: Text(
                     'Sign In',
